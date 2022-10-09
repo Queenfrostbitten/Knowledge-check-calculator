@@ -51,8 +51,16 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "3":
-                    // Add code here
-                    break;
+                    Console.WriteLine("Enter 2 integers to mulitply");
+                    var multiplyNumber1 = Console.ReadLine();
+                    var multiplyNumber2 = Console.ReadLine();
+
+                    if (double.TryParse(mulitiplyNumber1, out double multiNumOne) && double.TryParse(multiplyNumber2, out double multiNumTwo))
+                    {
+                        Console.Write($"{multiplyNumber1} / {multiplyNumber2} = ");
+                        Console.Write(calculator.multiply(multiNumOne, multiNumTwo));
+                        // Add code here
+                        break;
 
                 case "4":
                     Console.WriteLine("Enter 2 integers to divide");
